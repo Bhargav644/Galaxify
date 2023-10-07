@@ -10,9 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.9.4",
+    "firebase": "^9.17.1",
+    "firebase-tools": "^11.24.0",
+    "quill-emoji": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0"
+    "react-google-button": "^0.7.2",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.16.0",
+    "react-toastify": "^9.1.1",
+    "react-uuid": "^2.0.0",
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
