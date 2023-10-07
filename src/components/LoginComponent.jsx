@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { LoginAPI } from "../api/AuthApi";
 import logo from "../assets/logo.png";
+import bgvid from "../assets/bgvid.mp4"
 import { useNavigate } from "react-router-dom";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
@@ -25,6 +26,10 @@ export default function LoginComponent() {
 
   return (
     <div className="login-wrapper">
+       <video className="video-background" autoPlay loop muted>
+        <source src={bgvid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <img src={logo} className="Logo" />
 
       <div className="login-wrapper-inner">

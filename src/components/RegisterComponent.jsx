@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RegisterAPI } from "../api/AuthApi";
 import { postUserData } from "../api/FirestoreAPI";
 import logo from "../assets/logo.png";
+import bgvid from "../assets/bgvid.mp4"
 import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
@@ -34,6 +35,10 @@ export default function RegisterComponent() {
 
   return (
     <div className="login-wrapper">
+       <video className="video-background" autoPlay loop muted>
+        <source src={bgvid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <img src={logo} className="Logo" />
 
       <div className="login-wrapper-inner">
