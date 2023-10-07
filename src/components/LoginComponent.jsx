@@ -4,13 +4,16 @@ import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import { useAuth } from "../AuthContext"; // Import the useAuth hook
 
 export default function LoginComponent() {
   let navigate = useNavigate();
-  const [credentails, setCredentials] = useState({});
+  const { setCredentials } = useAuth(); // Use the useAuth hook
+  const [credentials, setLocalCredentials] = useState({}); // Local state for login form
+
   const login = async () => {
     try {
-      let res = await LoginAPI(credentails.email, credentails.password);
+      let res = await LoginAPI(credentials.email, credentials.password);
       toast.success("Signed In to Galaxify!");
       localStorage.setItem("userEmail", res.user.email);
       navigate("/home");
@@ -31,21 +34,19 @@ export default function LoginComponent() {
         <div className="auth-inputs">
           <input
             onChange={(event) =>
-              setCredentials({ ...credentails, email: event.target.value })
+              setLocalCredentials({ ...credentials, email: event.target.value })
             }
             type="email"
             className="common-input"
             placeholder="Email or Phone"
-            required
           />
           <input
             onChange={(event) =>
-              setCredentials({ ...credentails, password: event.target.value })
+              setLocalCredentials({ ...credentials, password: event.target.value })
             }
             type="password"
             className="common-input"
             placeholder="Password"
-            required
           />
         </div>
         <button onClick={login} className="login-btn">
