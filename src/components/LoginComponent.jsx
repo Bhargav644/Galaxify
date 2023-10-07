@@ -36,6 +36,7 @@ export default function LoginComponent() {
             type="email"
             className="common-input"
             placeholder="Email or Phone"
+            required
           />
           <input
             onChange={(event) =>
@@ -44,6 +45,7 @@ export default function LoginComponent() {
             type="password"
             className="common-input"
             placeholder="Password"
+            required
           />
         </div>
         <button onClick={login} className="login-btn">
