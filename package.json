@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/css": "^11.11.2",
+    "@react-three/drei": "^9.86.3",
+    "@react-three/fiber": "^8.14.5",
     "antd": "^5.9.4",
     "firebase": "^9.17.1",
     "firebase-tools": "^11.24.0",
@@ -21,7 +24,8 @@
     "react-router-dom": "^6.16.0",
     "react-toastify": "^9.1.1",
     "react-uuid": "^2.0.0",
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "three": "^0.157.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

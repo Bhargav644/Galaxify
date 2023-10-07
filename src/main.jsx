@@ -6,7 +6,7 @@ import { app, auth } from "./firebaseConfig";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-quill/dist/quill.snow.css";
-import "./index.scss";
+import "./index.css";
 import { AuthProvider } from "./AuthContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
