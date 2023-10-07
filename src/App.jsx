@@ -1,10 +1,10 @@
-import { BrowserRouter,Route,Router } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import LandingPage from './pages/landing'
 
 function App() {
 
   return (
-    
+
   )
 }
 
