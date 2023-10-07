@@ -1,13 +1,15 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property*/
+
 import { landingWrapper } from "./styles"
-import { Canvas } from "@react-three/fiber";
-import Sphere from "../../components/models/Sphere";
+import Planet from "../../components/planets/index";
+import Cloud from "../../assets/cloud.jpeg"
+import Earth from "../../assets/earth.jpeg"
 
 function LandingModule() {
   return (
     <div id="here" className={landingWrapper}>
-        <Canvas>
-          <Sphere/>
-        </Canvas>
+        <Planet atmosphereTexture={Cloud} planetTexture={Earth}  planetRadius={1}/>
     </div>
   )
 }
