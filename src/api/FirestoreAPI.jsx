@@ -8,8 +8,6 @@ import { toast } from "react-toastify";
 let userRef = collection(firestore, "users");
 
 
-
-
 export const postUserData = (object) => {
   addDoc(userRef, object)
     .then(() => {})
