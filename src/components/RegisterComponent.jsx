@@ -44,6 +44,7 @@ export default function RegisterComponent() {
             type="text"
             className="common-input"
             placeholder="Your Name"
+            required
           />
           <input
             onChange={(event) =>
@@ -52,6 +53,7 @@ export default function RegisterComponent() {
             type="email"
             className="common-input"
             placeholder="Email or phone number"
+            required
           />
           <input
             onChange={(event) =>
@@ -60,6 +62,7 @@ export default function RegisterComponent() {
             type="password"
             className="common-input"
             placeholder="Password (6 or more characters)"
+            required
           />
         </div>
         <button onClick={register} className="login-btn">
