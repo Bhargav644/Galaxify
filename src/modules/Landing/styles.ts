@@ -27,6 +27,35 @@ export const landingWrapper = css`
       font-weight: 900;
     }
   }
+  & .buttonWrapper {
+    height: auto;
+    top: 65%;
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-38%);
+    button {
+      border-radius: 50px;
+      letter-spacing: 3.645px;
+    }
+  }
+
+  & .grey {
+    left: 20%;
+    border-radius: 70px;
+    border: 1px solid ${theme.dark};
+    background: ${theme.grey};
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 1rem;
+  }
+  & .blue {
+    right: 20%;
+    border-radius: 70px;
+    border: 1px solid ${theme.dark};
+    background: ${theme.blue};
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 2.5rem;
+  }
 `;
 
 export const planetDiv = css`
