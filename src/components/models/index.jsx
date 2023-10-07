@@ -10,7 +10,7 @@ function Sphere(props) {
   useFrame(({clock})=>{
     const elapsedTime=clock.elapsedTime/6;
     if(isAtmosphere){
-      meshRef.current.rotation.x=elapsedTime*3
+      meshRef.current.rotation.x=elapsedTime*5
     }else{
       meshRef.current.rotation.y=elapsedTime;
     }
