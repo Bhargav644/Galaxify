@@ -18,7 +18,7 @@ function Sphere(props) {
   const colorMap=useLoader(TextureLoader,texture)
   return (
         <mesh ref={meshRef} position={position} >
-          <sphereGeometry ref={meshRef} args={[radius,32,32]}/>
+          <sphereGeometry ref={meshRef} args={[radius,64,64]}/>
           <meshBasicMaterial map={colorMap} transparent={isTransparent} opacity={opacity}/>
         </mesh>
   )
