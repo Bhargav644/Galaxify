@@ -6,21 +6,24 @@ import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import { useAuth } from "../AuthContext"; // Import the useAuth hook
 
 export default function RegisterComponent() {
   let navigate = useNavigate();
-  const [credentails, setCredentials] = useState({});
+  const { credentials, setCredentials, setUser } = useAuth(); // Use the useAuth hook
+
   const register = async () => {
     try {
-      let res = await RegisterAPI(credentails.email, credentails.password);
+      let res = await RegisterAPI(credentials.email, credentials.password);
       toast.success("Account Created!");
       postUserData({
         userID: getUniqueID(),
-        name: credentails.name,
-        email: credentails.email,
+        name: credentials.name,
+        email: credentials.email,
         imageLink:
           "https://www.nicepng.com/png/full/933-9332131_profile-picture-default-png.png",
       });
+      setUser(res.user); // Set the user in your context
       navigate("/home");
       localStorage.setItem("userEmail", res.user.email);
     } catch (err) {
@@ -39,7 +42,7 @@ export default function RegisterComponent() {
         <div className="auth-inputs">
           <input
             onChange={(event) =>
-              setCredentials({ ...credentails, name: event.target.value })
+              setCredentials({ ...credentials, name: event.target.value })
             }
             type="text"
             className="common-input"
@@ -48,7 +51,7 @@ export default function RegisterComponent() {
           />
           <input
             onChange={(event) =>
-              setCredentials({ ...credentails, email: event.target.value })
+              setCredentials({ ...credentials, email: event.target.value })
             }
             type="email"
             className="common-input"
@@ -57,7 +60,7 @@ export default function RegisterComponent() {
           />
           <input
             onChange={(event) =>
-              setCredentials({ ...credentails, password: event.target.value })
+              setCredentials({ ...credentials, password: event.target.value })
             }
             type="password"
             className="common-input"
