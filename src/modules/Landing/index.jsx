@@ -6,16 +6,11 @@ import Cloud from "../../assets/cloud.png";
 import Earth from "../../assets/earth.jpeg";
 import StarsModel from "../../components/stars";
 import Navbar from "../../components/navBar";
-import { useNavigate } from "react-router-dom";
 
 function LandingModule() {
-  const navigate = useNavigate();
   return (
     <div id="here" className={landingWrapper}>
       <Navbar />
-      <div className="landingPageText">
-        <p>Escape the Exosphere</p>
-      </div>
       <StarsModel />
       <div className={planetDiv}>
         <Planet
@@ -24,14 +19,6 @@ function LandingModule() {
           planetRadius={3}
           showAtmosphere={true}
         />
-      </div>
-      <div className="buttonWrapper">
-        <button className="grey" onClick={() => navigate("/destination")}>
-          EXPLORE
-        </button>
-        <button className="blue" onClick={() => navigate("/quiz")}>
-          GET STARTED
-        </button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PersonalDetails from "./personal-details";
 import { formPageWrapper } from "./styles";
 import PreferenceDetails from "./preferenceDetails";
