@@ -11,7 +11,11 @@ function LandingModule() {
   return (
     <div id="here" className={landingWrapper}>
       <Navbar />
+      <div className="landingPageText">
+        <p>Escape the Exosphere</p>
+      </div>
       <StarsModel />
+
       <div className={planetDiv}>
         <Planet
           atmosphereTexture={Cloud}
