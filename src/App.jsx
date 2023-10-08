@@ -3,6 +3,7 @@ import LandingPage from "./pages/Landing";
 import DestinationsPage from "./pages/Destinations";
 import ProductDescriptionPage from "./pages/PDP";
 import Quiz from "./pages/quiz/index";
+import Packages from "./pages/package/index";
 function App() {
   return (
     <BrowserRouter>
@@ -12,8 +13,9 @@ function App() {
           path="/destinations/:destination"
           element={<ProductDescriptionPage />}
         />
-        <Route path="/" element={<LandingPage />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/packages/:package_id" element={<Packages/>} />
+        <Route path="/" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>
   );

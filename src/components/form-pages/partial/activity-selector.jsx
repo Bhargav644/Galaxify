@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { activityCard } from "./style";
 import { useNavigate } from "react-router-dom";
 
 const ActivitySelector = ({ activity, packageName }) => {
@@ -69,7 +68,7 @@ const ActivitySelector = ({ activity, packageName }) => {
     <div>
       {ActivityData.map((ele, ind) => {
         return (
-          <div key={ind} className={activityCard}>
+          <div key={ind}>
             <input
               type="checkbox"
               name={ele.activityName}
