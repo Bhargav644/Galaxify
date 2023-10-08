@@ -1,15 +1,18 @@
 import { css } from "@emotion/css";
-import { theme } from "../../modules/constant";
 
 export const formPageWrapper = css`
-  margin: auto;
-  width: 90%;
-  background-color: ${theme.grey};
+  width: 650px;
   height: 90%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const personalDetails = css`
   height: 80vh;
+  h2 {
+    transform: translate(35%, 25%);
+  }
 `;
 
 export const quizCards = css`
@@ -19,6 +22,10 @@ export const quizCards = css`
   align-items:center
   background-color: grey;
   height:60vh;
+
+  table{
+    height:fit-content;
+  }
 
   tr {
     display: flex;
@@ -32,10 +39,13 @@ export const quizCards = css`
     width: 25vw;
     text-align: center;
     height: 3rem;
+    border-bottom : 1px solid grey;
   }
   td .input {
     height: 2.4rem;
     width: 25vw;
+    border-radius: 2px 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
   p {
     min-width: 15vw;
@@ -54,6 +64,15 @@ export const quizCards = css`
 `;
 
 export const quizCardsPreference = css`
+  font-size: 1.2rem;
+  & .question-card {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  & .answer td {
+    display: flex;
+  }
   tr {
     display: flex;
     justify-content: space-evenly;
@@ -64,3 +83,5 @@ export const quizCardsPreference = css`
     text-align: center;
   }
 `;
+
+export const successWrapper = css``;

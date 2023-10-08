@@ -3,6 +3,7 @@ import PersonalDetails from "./personal-details";
 import { formPageWrapper } from "./styles";
 import PreferenceDetails from "./preferenceDetails";
 import SuccessRedirection from "./SuccessRedirection";
+
 const FormPages = () => {
   const [pageId, setPageId] = useState(1);
   const value = {
