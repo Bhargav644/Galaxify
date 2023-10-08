@@ -60,7 +60,24 @@ export const TextStyle = css`
 `;
 
 export const UserIconStyle = css`
+  margin-left: 10px;
+`;
+
+export const navRight = css`
+  text-align: right;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  z-index: 40;
+  transform: translate(-37px, 22px);
+  display: flex;
+
+  & .navText {
+    margin: 5px 10px 0px 10px;
+    z-index: 40;
+    text-decoration: none;
+
+    & .link {
+      color: white;
+    }
+  }
 `;

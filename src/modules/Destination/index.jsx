@@ -20,8 +20,6 @@ function DestinationModule({destinations}) {
   const clickHandler=(idx)=>{
     return ()=>{
       setId(idx)
-      console.log(destinations[id]?.name)
-      console.log(Planets[destinations[id]?.name] ?? Planets['Fallback'])
     }
   }
 

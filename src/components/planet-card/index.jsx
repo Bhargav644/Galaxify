@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property*/
 
+import { Link } from "react-router-dom";
 import { cardWrapper } from "./styles";
 
 function PlanetCard({planet,clickHandler}) {
@@ -10,6 +11,13 @@ function PlanetCard({planet,clickHandler}) {
       <div className="footer">
           <p className="footer-text">
             {planet.name}
+          </p>
+          <p>
+            <button>
+              <Link className="link" to={`/destinations/${planet.name}`}>
+                Select
+              </Link>
+            </button>
           </p>
       </div>
     </div>

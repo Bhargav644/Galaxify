@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { baseURL } from "../../modules/constant"
 import axios from "axios"
 import DestinationModule from "../../modules/Destination";
+import Navbar from "../../components/navBar";
 
 function DestinationsPage() {
 
@@ -18,6 +19,7 @@ function DestinationsPage() {
 
   return (
     <div>
+        <Navbar/>
         <DestinationModule destinations={destinations}/>
     </div>
   )
