@@ -1,0 +1,52 @@
+.pkg__container {
+  background-color: #dedddd;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.pkg__top {
+  width: 100%;
+}
+
+.pkg__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.pkg__bottom {
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.pkg__heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pkg__headingText {
+  font-size: 1.4rem;
+}
+
+.pkg__headingText > span {
+  font-size: 0.8rem;
+}
+
+.pkg__price {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+.pkg__desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

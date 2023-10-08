@@ -1,11 +1,5 @@
 import LandingModule from "../../modules/Landing"
 
-function LandingPage() {
-  return (
-    <div>
-        <LandingModule/>
-    </div>
-  )
-}
+const LandingPage = LandingModule
 
 export default LandingPage
