@@ -1,0 +1,87 @@
+.pdp__container{
+    background: #00051D;
+    padding-bottom: 5rem;
+}
+
+.pdp__main{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pdp__loading{
+    min-height: calc(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdp__content{
+    display: flex;
+    gap: 0.5rem;
+    padding: 8rem 2rem;
+}
+
+.pdp__left, .pdp__right{
+    flex: 1;
+}
+
+.pdp__right{
+    text-align: center;
+}
+
+.pdp__img{
+    width: 80%;
+    object-fit: contain;
+}
+
+.pdp__infoContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.pdp__infoHeading{
+    flex: 1;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.pdp__infoP{
+    flex: 1;
+    font-size: 1rem;
+    text-align: left;
+    align-self: center;
+    padding-top: 0.5rem;
+}
+
+.pdp__packages{
+    display: flex;
+    gap: 3rem;
+    overflow: scroll;
+    padding-bottom: 2rem;
+
+}
+
+.pdp__facts > li{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.pkg__heading{
+    font-size: 3rem;
+}
+
+.pkg__places{
+    display: flex;
+    gap: 3rem;
+    overflow: scroll;
+    padding-bottom: 2rem;
+}
+
+.pkg__placesHeading{
+    font-size: 3rem;
+    margin-top: 4rem;
+}
