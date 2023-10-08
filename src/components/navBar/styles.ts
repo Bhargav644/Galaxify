@@ -8,7 +8,7 @@ export const container = css`
     border-radius: 50%;
     background-color: ${theme.logoColorLight};
     position: absolute;
-    transform: translate(37px, 17px);
+    transform: translate(37px, 20px);
     z-index: 10;
   }
 `;
