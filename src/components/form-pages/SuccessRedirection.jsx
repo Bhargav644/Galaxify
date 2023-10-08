@@ -33,7 +33,6 @@ const SuccessRedirection = ({ data }) => {
       })
       .catch((err) => {
         setError(err);
-        console.log("Reshav", err);
       });
   }, [errorState, data]);
 

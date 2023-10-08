@@ -12,7 +12,6 @@ const ActivitySelector = ({ activity, packageName }) => {
   const [errorState, setError] = useState({});
   const [selectedActivites, setSelectedActivites] = useState([]);
   const onChange = (e) => {
-    console.log("reshav check", e.target.value);
     setSelectedActivites((prev) => {
       return [...prev, e.target.value];
     });
@@ -30,17 +29,16 @@ const ActivitySelector = ({ activity, packageName }) => {
       data: JSON.stringify({
         PackageName: packageName.letter,
         Duration: 9,
-        activities: selectedActivites,
+        ActivityIDs: selectedActivites,
         Destination: activity?.id ?? 1,
+        DestinationName: activity?.name,
       }),
     })
       .then((res) => {
-        console.log("reshav res 2nd post", res.data);
         navigate("/packages/" + res.data[0].id);
       })
       .catch((err) => {
         setError(err);
-        console.log("Reshav err", err);
       });
   };
 
@@ -60,15 +58,12 @@ const ActivitySelector = ({ activity, packageName }) => {
       }),
     })
       .then((res) => {
-        console.log("reshav res", res.data);
         setActivityData(res.data);
       })
       .catch((err) => {
         setError(err);
-        console.log("Reshav", err);
       });
   }, [activity]);
-  console.log("reshav", ActivityData);
 
   return (
     <div>
