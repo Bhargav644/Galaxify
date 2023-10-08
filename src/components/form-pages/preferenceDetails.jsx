@@ -22,7 +22,6 @@ const PreferenceDetails = ({
     });
   };
   const onSubmitClick = () => {
-    console.log("reshav", prefDetails);
     onNextButtonClick(prefDetails);
   };
 
