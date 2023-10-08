@@ -99,7 +99,7 @@ const ProductDescriptionPage = () => {
           <div className="pdp__packages">
             {pdpData &&
               pdpData.packages.map((item) => (
-                <PackageCard key={item.key} data={item} />
+                <PackageCard key={item.key} data={item} link={true}/>
               ))}
           </div>
 
@@ -131,10 +131,9 @@ const ProductDescriptionPage = () => {
                   Duration: activity.location,
                   ImageUrl: activity?.image ?? undefined,
                   description: activity.description,
-                  Effort: activity.effort,
-                  link: false,
+                  Effort: activity.effort
                 };
-                return <PackageCard key={activity.key} data={item} />;
+                return <PackageCard key={activity.key} data={item} link={true}/>;
               })}
           </div>
         </div>

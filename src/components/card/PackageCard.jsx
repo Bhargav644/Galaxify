@@ -4,10 +4,10 @@ import roverImg from "../../assets/animated-rover-in-space.png";
 import { Link, useParams } from "react-router-dom";
 import { capitalize } from "../../helpers";
 
-const PackageCard = ({ data }) => {
+const PackageCard = ({ data, link = false }) => {
   const { destination } = useParams();
   return (
-    <Link to={data.link ? `${data.id}`: ""} className="pkg__container">
+    <Link to={link ? `/packages/${data.id}`: ""} className="pkg__container">
       <div className="pkg__top">
         <img
           className="pkg__img"

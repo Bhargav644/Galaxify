@@ -8,7 +8,6 @@ import PlanetCard from "../../components/planet-card";
 import { Planets } from "../constant";
 
 function DestinationModule({ destinations }) {
-  const [radius, setRadius] = useState(3);
   const [id, setId] = useState(0);
 
   useEffect(() => {}, [id]);
@@ -21,18 +20,9 @@ function DestinationModule({ destinations }) {
 
   return (
     <div className={destinationWrapper}>
-      <div className="planet-div">
-        <Planet
-          enableZoom={true}
-          animate={true}
-          showPiece={true}
-          showAtmosphere={false}
-          planetTexture={
-            Planets[destinations?.[id]?.name] ?? Planets["Fallback"]
-          }
-          planetRadius={radius}
-        />
-      </div>
+        <div className='planet-div'>
+            <Planet enableZoom={true} animate={true} showPiece={true} showAtmosphere={false} planetTexture={Planets[destinations?.[id]?.name]?.image ?? Planets['Fallback'].image}  planetRadius={3}/>
+        </div>
       <div className="card-div">
         {destinations?.map((obj, idx) => {
           return (

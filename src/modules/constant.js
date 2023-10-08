@@ -22,17 +22,17 @@ export const theme = {
 
 export const baseURL = "https://galaxify-bacend.vercel.app/api";
 
-export const Planets = {
-  Earth: Earth,
-  Moon: Moon,
-  Mercury: Mercury,
-  Mars: Mars,
-  Neptune: Neptune,
-  Venus: Venus,
-  Jupiter: Jupiter,
-  Uranus: Uranus,
-  Saturn: Saturn,
-  Titan: Venus,
-  Fallback: Fallback,
-  Cupid: Moon,
-};
+export const Planets={
+    Earth:{image:Earth,radius:2.7},
+    Moon:{image:Moon,radius:1.2},
+    Mercury:{image:Mercury,radius:1.4},
+    Mars:{image:Mars,radius:2},
+    Neptune:{image:Neptune,radius:2.5},
+    Venus:{image:Venus,radius:2.7},
+    Jupiter:{image:Jupiter,radius:3.4},
+    Uranus:{image:Uranus,radius:2.5},
+    Saturn:{image:Saturn,radius:2.9},
+    Titan:{image:Venus,radius:2.5},
+    Fallback:{image:Fallback,radius:2.7},
+    Cupid:{image:Moon,radius:1.9},
+}
