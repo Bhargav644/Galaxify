@@ -4,6 +4,7 @@ export const landingWrapper = css`
   height: 98.5vh;
   width: 100vw;
   overflow: hidden;
+  position: relative;
   background-color: ${theme.dark};
 
   & .landingPageText {
