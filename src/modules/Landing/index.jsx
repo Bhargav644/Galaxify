@@ -11,9 +11,6 @@ function LandingModule() {
   return (
     <div id="here" className={landingWrapper}>
       <Navbar />
-      <div className="landingPageText">
-        <p>Escape the Exosphere</p>
-      </div>
       <StarsModel />
       <div className={planetDiv}>
         <Planet
@@ -22,10 +19,6 @@ function LandingModule() {
           planetRadius={3}
           showAtmosphere={true}
         />
-      </div>
-      <div className="buttonWrapper">
-        <button className="grey">EXPLORE</button>
-        <button className="blue">GET STARTER</button>
       </div>
     </div>
   );
