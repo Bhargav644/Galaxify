@@ -20,6 +20,7 @@ function LandingModule() {
           atmosphereTexture={Cloud}
           planetTexture={Earth}
           planetRadius={3}
+          showAtmosphere={true}
         />
       </div>
       <div className="buttonWrapper">
