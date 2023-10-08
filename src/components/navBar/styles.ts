@@ -56,7 +56,9 @@ export const ring2 = css`
 
 export const TextStyle = css`
   position: absolute;
-  transform: translate(15px, 55px);
+  color: white;
+  transform: translate(15px, 60px);
+  font-weight: 600;
 `;
 
 export const UserIconStyle = css`
