@@ -15,7 +15,6 @@ const PersonalDetails = ({
     age: "",
   };
   const [personalDetail, setPersonDetail] = useState(value);
-  console.dir(today);
   const onSubmitClick = () => {
     onNextButtonClick(personalDetail);
   };

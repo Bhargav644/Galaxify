@@ -46,7 +46,6 @@ const ProductDescriptionPage = () => {
     };
     getPDPData(destination);
   }, [destination]);
-  console.log(pdpData, "that");
   return (
     <div className="pdp__container">
       <Navbar />
@@ -104,7 +103,9 @@ const ProductDescriptionPage = () => {
               ))}
           </div>
 
-          <h1 className="pkg__placesHeading">Interesting Places at {capitalize(destination)}</h1>
+          <h1 className="pkg__placesHeading">
+            Interesting Places at {capitalize(destination)}
+          </h1>
           <div className="pkg__places">
             {pdpData.places &&
               pdpData.places.map((place) => {
@@ -118,7 +119,9 @@ const ProductDescriptionPage = () => {
                 return <PackageCard key={place.key} data={item} />;
               })}
           </div>
-          <h1 className="pkg__placesHeading">Interesting Places at {capitalize(destination)}</h1>
+          <h1 className="pkg__placesHeading">
+            Interesting Places at {capitalize(destination)}
+          </h1>
           <div className="pkg__places">
             {pdpData.activities &&
               pdpData.activities.map((activity) => {
@@ -129,7 +132,7 @@ const ProductDescriptionPage = () => {
                   ImageUrl: activity?.image ?? undefined,
                   description: activity.description,
                   Effort: activity.effort,
-                  link: false
+                  link: false,
                 };
                 return <PackageCard key={activity.key} data={item} />;
               })}

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ActivitySelector from "./partial/activity-selector";
 
 const SuccessRedirection = ({ data }) => {
   const url = "https://galaxify-bacend.vercel.app/api/recommend";
@@ -14,7 +15,6 @@ const SuccessRedirection = ({ data }) => {
       headers: {
         "Content-Type": "application/json",
       },
-
       // Attaching the form data
       data: data,
     })
@@ -28,7 +28,12 @@ const SuccessRedirection = ({ data }) => {
   }, [errorState, data]);
 
   console.log("reshav", data, packageData);
-  return <div>SuccessRedirection</div>;
+  return (
+    <div>
+      <p> Well Done! Your Quiz Has Been Submitted Successfully </p>
+      {packageData.length && <ActivitySelector activity={packageData[0]} />}
+    </div>
+  );
 };
 
 export default SuccessRedirection;
