@@ -64,6 +64,6 @@ export const planetDiv = css`
   background-color: transparent;
   transform: translate(-22%, -20%);
   padding: 20% 0%;
-  z-index: 10;
+  z-index: 1;
   position: absolute;
 `;
